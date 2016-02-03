@@ -21,6 +21,14 @@ h1 {
 	color: #2589BD;
 }
 
+.panel-info {
+	box-shadow: 10px 10px 5px #888888;
+}
+
+.panel-default {
+	box-shadow: 10px 10px 5px #888888;
+}
+
 
 
 /*
