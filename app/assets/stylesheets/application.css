@@ -1,3 +1,13 @@
+body {
+	background-color: #CDC6AE;
+}
+
+.container {
+	background-color: rgba(163, 180, 162, 0.3);
+}
+
+
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

@@ -1,19 +1,55 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @blog_post.title %>
-</p>
+<div class="panel panel-info">
 
-<p>
-  <strong>Author:</strong>
-  <%= @blog_post.author %>
-</p>
+<div class="panel-heading">
 
-<p>
-  <strong>Blog entry:</strong>
-  <%= @blog_post.blog_entry %>
-</p>
+  <h3><%= @blog_post.title %></h3>
 
-<%= link_to 'Edit', edit_blog_post_path(@blog_post) %> |
+</div>
+
+<div class="panel-body">
+  <p><%= @blog_post.blog_entry %></p>
+</div>
+
+<div class="panel-footer panel-info">
+<h5>
+  <strong>By: </strong>
+  <%= @blog_post.author %> at <%= @blog_post.created_at.strftime('%m/%d/%Y %I:%M%p') %>
+</h5>
+</div>
+
+</div>
+
+<div>
+<button type="button" class="btn btn-default"><%= link_to 'Edit', edit_blog_post_path(@blog_post) %></button>
+</div>
+
+<br>
+
+<div>
+	<%= render 'comments/form' %>
+</div>
+
+<!-- below shows comments -->
+
+<div class="container">
+<div class="panel panel-default">
+	<div class="panel-header">
+		<h4>Comments</h4>
+	</div>
+	<% @blog_post.comments.each do |comment| %>
+	<div class="panel-body">
+		<p><strong><%= comment.author %></strong></p>
+		<p><%= comment.comment_entry %></p>
+		<strong><%= comment.created_at.strftime('%m/%d/%Y %I:%M%p') %></strong>
+	</div>
+	<% end %>
+</div>
+</div>
+
+<div class="container">
+<button type="button" class="btn btn-default">
 <%= link_to 'Back', blog_posts_path %>
+</button>
+</div>

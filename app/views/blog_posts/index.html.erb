@@ -21,7 +21,7 @@
         </div>
 
         <div class="panel-footer panel-info">
-        <%= link_to 'Edit', edit_blog_post_path(blog_post), class: "btn btn-warning" %>
+        <%= link_to 'Edit', edit_blog_post_path(blog_post), class: "btn btn-info" %>
         <%= link_to 'Delete', blog_post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
         </div>
 
@@ -36,4 +36,4 @@
 
 <br>
 
-<%= link_to 'New Blog post', new_blog_post_path %>
+<%= link_to 'New Post', new_blog_post_path, class: "btn btn-info" %>

@@ -1,6 +1,13 @@
+
+<div class="panel panel-info">
+<div class="panel-heading">
 <h1>Editing Blog Post</h1>
+</div>
+</div>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @blog_post %> |
-<%= link_to 'Back', blog_posts_path %>
+<div class="container">
+<button type="button" class="btn btn-default"><%= link_to 'Show', @blog_post %></button>
+<button type="button" class="btn btn-default"><%= link_to 'Back', blog_posts_path %></button>
+</div>
