@@ -18,10 +18,6 @@
   </div>
 
   <div class="panel-body">
-  <div class="field">
-    <%= f.label :author %><br>
-    <%= f.text_field :author %>
-  </div>
 
   <div class="field">
     <%= f.label :comment_entry %><br>
@@ -30,6 +26,7 @@
 
   <div class="cant-see-me">
     <%= f.number_field :blog_post_id, value: @blog_post.id %>
+    <%= f.number_field :user_id, value: current_user.id %>
   </div>
 
   <div class="actions">

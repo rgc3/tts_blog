@@ -47,7 +47,7 @@
         </div>
 
         <div class="panel-body">
-            by <%= blog_post.author %><br>
+            by <%= blog_post.user.email %><br>
             <p><%= blog_post.blog_entry[0..250] %>...</P><%= link_to "READ MORE", blog_post %>
         </div>
 
