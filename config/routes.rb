@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :comments
   resources :blog_posts
 
-root 'blog_posts#index' 
+  # get 'signup' => 'devise/registrations#new'
+
+  root 'blog_posts#index' 
 
 
   end
