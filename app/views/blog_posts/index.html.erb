@@ -12,20 +12,20 @@
       <div class="panel panel-info">
 
         <div class="panel-heading">
-        <h4><strong><%= blog_post.title %></strong></h4>
+            <h4><strong><%= blog_post.title %></strong></h4>
         </div>
 
         <div class="panel-body">
-        by <%= blog_post.author %><br>
-        <p><%= blog_post.blog_entry[0..250] %>...</P><%= link_to "READ MORE", blog_post %>
+            by <%= blog_post.author %><br>
+            <p><%= blog_post.blog_entry[0..250] %>...</P><%= link_to "READ MORE", blog_post %>
         </div>
 
         <div class="panel-footer panel-info">
-        <%= link_to 'Edit', edit_blog_post_path(blog_post), class: "btn btn-info" %>
-        <%= link_to 'Delete', blog_post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+            <%= link_to 'Edit', edit_blog_post_path(blog_post), class: "btn btn-info" %>
+            <%= link_to 'Delete', blog_post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
         </div>
 
-      </div>
+        </div>
 
     </div>
 

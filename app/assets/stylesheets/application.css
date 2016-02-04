@@ -18,15 +18,18 @@ h1 {
 
 .navbar {
 	font-family: 'Bangers', cursive;
-	color: #2589BD;
 }
 
 .panel-info {
-	box-shadow: 10px 10px 5px #888888;
+	box-shadow: 7px 7px 3px #888888;
 }
 
 .panel-default {
-	box-shadow: 10px 10px 5px #888888;
+	box-shadow: 7px 7px 3px #888888;
+}
+
+.panel-heading {
+	color: #2589BD!important;
 }
 
 
