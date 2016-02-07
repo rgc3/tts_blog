@@ -45,8 +45,12 @@
 <!-- right nav login link -->
 
         <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to "Sign in", new_user_session_path %></li>
-          <li><%= link_to "Signup", new_user_registration_path %></li>
+          <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+          <li>
+            <% if user_signed_in? %>
+            <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+            <% end %>
+          </li>
         </ul>
 
       </div><!-- /.navbar-collapse -->
@@ -55,17 +59,6 @@
 
 <div class="container">
 <%= yield %>
-
-<!-- sign out button -->
-
-   <div class="pull-right">
-    <% if user_signed_in? %>
-      <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "btn btn-danger" %>
-    <% end %>
-  </div>
-
-  <%= link_to "Edit Profile", edit_user_registration_path, class: "btn btn-primary" %>
-
 </div>
 
 

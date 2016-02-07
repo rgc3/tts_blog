@@ -15,7 +15,7 @@
 	<div class="panel-footer panel-info">
 		<h5>
 		  <strong>By: </strong>
-		  <%= @blog_post.user.email %> at <%= @blog_post.created_at.strftime('%m/%d/%Y %I:%M%p') %>
+		  <%= @blog_post.user.username %> at <%= @blog_post.created_at.strftime('%m/%d/%Y %I:%M%p') %>
 		</h5>
 	</div>
 
@@ -40,7 +40,7 @@
 		</div>
 			<% @blog_post.comments.each do |comment| %>
 		<div class="panel-body">
-			<p><strong><%= comment.user.email %></strong></p>
+			<p><strong><%= comment.user.username %></strong></p>
 			<p><%= comment.comment_entry %></p>
 			<strong><%= comment.created_at.strftime('%m/%d/%Y %I:%M%p') %></strong>
 		</div>
