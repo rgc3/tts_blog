@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   # get 'signup' => 'devise/registrations#new'
 
+  get 'your_posts' => 'blog_posts#your_posts'
+
   root 'blog_posts#index' 
 
 

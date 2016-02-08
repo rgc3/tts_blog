@@ -7,6 +7,9 @@ class BlogPostsController < ApplicationController
     @blog_posts = BlogPost.all
   end
 
+  def your_posts
+  end
+
   # GET /blog_posts/1
   # GET /blog_posts/1.json
   def show
