@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   get 'your_posts' => 'blog_posts#your_posts'
 
+  get 'user_posts' => 'blog_posts#user_posts'
+
   root 'blog_posts#index' 
 
 

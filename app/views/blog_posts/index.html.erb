@@ -47,7 +47,8 @@
         </div>
 
         <div class="panel-body">
-            by <%= blog_post.user.username %><br>
+            by <%= link_to blog_post.user.username, user_posts_path(id: blog_post.user.id) %><br>
+
             <p><%= blog_post.blog_entry[0..250] %>...</P><%= link_to "READ MORE", blog_post %>
         </div>
 

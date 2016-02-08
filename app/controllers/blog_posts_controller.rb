@@ -10,6 +10,10 @@ class BlogPostsController < ApplicationController
   def your_posts
   end
 
+  def user_posts
+    @user = User.find(params[:id])
+  end
+
   # GET /blog_posts/1
   # GET /blog_posts/1.json
   def show
